@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="stylesheet" href="css/main.css">
     <script src="js/script.js"></script>
-    <title>ENCRYPTION PROGRAM</title>
+    <title>verschluessleION PROGRAM</title>
 </head>
+
 <body>
-    
+    <!-- MAIN CONTENT-->
+    <!-- ERSCHTI FUNKTION-->
+    <div class="function1">
+        <h1>Wortverschlüsselung 1</h1>
+        <input type="text" id="wordInput" placeholder="Gib ein Wort ein">
+        <button onclick="encryptButtonClicked()">Verschlüsseln</button>
+        <p>Verschlüsseltes Wort: <span id="encryptedWord"></span></p>
+        <button onclick="decryptButtonClicked()">Entschlüsseln</button>
+        <p>Entschlüsseltes Wort: <span id="decryptedWord"></span></p>
+    </div>
+
+    <!-- ZWEITI FUNKTION-->
+    <div class="function2">
+        <h1>Wortverschlüsselung 2</h1>
+        <input type="text" id="wortInput" placeholder="Gib ein Wort ein">
+        <button onclick="verschluessleButtonClicked()">Verschlüsseln</button>
+        <p>Verschlüsseltes Wort: <span id="verschluesselteWort"></span></p>
+        <button onclick="entschlessleButtonClicked()">Entschlüsseln</button>
+        <p>Entschlüsseltes Wort: <span id="entschlesselteWort"></span></p>
+    </div>
+
 </body>
+
 </html>
