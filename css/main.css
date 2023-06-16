@@ -8,10 +8,12 @@ body {
     flex-direction: column;
     background-color: #3f3f3fad;
     border-radius: 1rem;
-    margin: 1em;
+    margin: 5em;
+    margin-top: 3em;
 }
 .title{
     text-align: center;
+    margin-bottom: 0;
 }
 
 .card {
@@ -98,7 +100,12 @@ button {
     .decrypt {
       margin: 1em 0;
     }
+
+    .container {
+        margin: 0;
   }
+
+}
 
 @media (prefers-color-scheme: dark) {
     .input {
