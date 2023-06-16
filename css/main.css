@@ -1,53 +1,42 @@
 html,
 body {
-    background: url('../images/background.jpg') center fixed no-repeat;
+    background: url("../images/background.jpg") center fixed no-repeat;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* opacity: 1; */
 }
 
 .card {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* align-items: center; */
-    /* align-content: stretch; */
-    margin: .5em .5em 1em .5em;
+
+    margin: 0.5em 0.5em 1em 0.5em;
     box-shadow: rgba(0, 0, 0, 0.7) 0px 11px 16px;
     border-radius: 5px;
-    /* height: 50%; */
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    /* border: 1px solid blue; */
-    /* align-content: space-between; */
-    /* opacity: .5; */
 }
 
 .encrypt {
     padding: 1em;
     margin: 1em 0 1em 0;
-    /* box-shadow: rgba(0, 0, 0, 0.315) 0px 3px 8px; */
-    /* width: 40%; */
+
     flex-basis: 40%;
-    /* flex-grow: .3; */
+
     height: 100%;
     background: rgb(171, 209, 242, 0.6);
-    /* border-radius: 5px; */
 }
 
 .decrypt {
     padding: 1em;
     margin: 1em 0 1em 0;
-    /* flex-grow: .45; */
-    /* width: 40%; */
+
     flex-basis: 40%;
     background: rgb(171, 209, 242, 0.6);
 }
 
-textarea {
+input {
     flex-basis: 80%;
     height: 50%;
     width: 50%;
@@ -84,7 +73,11 @@ button {
 @media (prefers-color-scheme: dark) {
     .input {
         background-color: rgb(43, 65, 100);
-        color: darkgray;
+        color: rgb(251, 249, 249);
+    }
+    input {
+        background-color: rgb(43, 65, 100);
+        color: rgb(251, 249, 249);
     }
 
     button {
@@ -99,6 +92,5 @@ button {
     .encrypt,
     .decrypt {
         background: rgb(171, 209, 242, 0.9);
-        /* filter: brightness(100%) !important; */
     }
 }
