@@ -1,18 +1,22 @@
-html,
 body {
     background: url("../images/background.jpg") center fixed no-repeat;
+    background-color: rgb(193, 198, 200); 
+    
 }
-
 .container {
     display: flex;
     flex-direction: column;
+    background-color: #3f3f3fad;
+    border-radius: 1rem;
+}
+.title{
+    text-align: center;
 }
 
 .card {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
     margin: 0.5em 0.5em 1em 0.5em;
     box-shadow: rgba(0, 0, 0, 0.7) 0px 11px 16px;
     border-radius: 5px;
@@ -20,20 +24,27 @@ body {
 
 .encrypt {
     padding: 1em;
-    margin: 1em 0 1em 0;
-
+    margin: 1em 0.2em 1em 0;
     flex-basis: 40%;
-
     height: 100%;
     background: rgb(171, 209, 242, 0.6);
+    border-radius: 1rem;
+    width: -webkit-fill-available;
 }
 
 .decrypt {
     padding: 1em;
-    margin: 1em 0 1em 0;
-
+    padding-top: 2EM;
+    margin: 1em 0.2em 1em 0;
     flex-basis: 40%;
+    height: 100%;
     background: rgb(171, 209, 242, 0.6);
+    border-radius: 1rem;
+    width: -webkit-fill-available;
+}
+
+.decrypt-text{
+    margin-bottom: 3em;
 }
 
 input {
@@ -43,7 +54,6 @@ input {
     resize: none;
     margin: 10px 5px 10px 5px;
     border: none;
-    background-color: transparent;
 }
 
 .input {
@@ -53,6 +63,7 @@ input {
     border-radius: 10px;
     border: 1px solid gray inset;
     padding: 2px;
+    margin-bottom: 1em;
 }
 
 button {
@@ -70,6 +81,19 @@ button {
     cursor: pointer;
 }
 
+
+@media (max-width: 426px) {
+    .card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .encrypt,
+    .decrypt {
+      margin: 1em 0;
+    }
+  }
+
 @media (prefers-color-scheme: dark) {
     .input {
         background-color: rgb(43, 65, 100);
@@ -84,7 +108,7 @@ button {
         color: darkgray;
     }
 
-    html {
+    body {
         color: rgb(255, 255, 255, 1);
         filter: brightness(60%);
     }

@@ -11,8 +11,6 @@
 </head>
 
 <body>
-
-
     <main>
         <!-- MAIN CONTENT-->
         <div class="container">
@@ -24,7 +22,7 @@
                 <div class="encrypt">
                     <h2>Text encryption with Ceasar encryption</h2>
                     <div class="input">
-                        <input type="text"id="wordInput" placeholder="Enter some text: ">
+                        <input type="text" id="wordInput" placeholder="Enter some text: ">
                     </div>
                     <button onclick="encryptButtonClicked()">Encrypt</button>
                     <p>Encypted text: <span id="encryptedWord"></span></p>
@@ -32,7 +30,7 @@
 
                 <div class="decrypt">
                     <button onclick="decryptButtonClicked()">Decrypt</button>
-                    <p>Decrypted text: <span id="decryptedWord"></span></p>
+                    <p class="decrypt-text">Decrypted text: <span id="decryptedWord"></span></p>
                 </div>
 
                 <!-- </div> -->
@@ -53,16 +51,13 @@
 
                 <div class="decrypt">
                     <button onclick="entschluessleButtonClicked()">Decrypt</button>
-                    <p>Decrypted text: <span id="entschluesselteWort"></span></p>
+                    <p class="decrypt-text">Decrypted text: <span id="entschluesselteWort"></span></p>
                 </div>
 
                 <!-- </div> -->
             </div>
-
         </div>
-
     </main>
-
 </body>
 
 </html>
