@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     background-color: #3f3f3fad;
     border-radius: 1rem;
+    margin: 1em;
 }
 .title{
     text-align: center;
@@ -54,6 +55,7 @@ input {
     resize: none;
     margin: 10px 5px 10px 5px;
     border: none;
+    background-color: aliceblue;
 }
 
 .input {
