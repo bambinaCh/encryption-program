@@ -5,32 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/script.js"></script>
-    <title>verschluessleION PROGRAM</title>
+    <title>Encryption Program</title>
 </head>
 
 <body>
-    <!-- MAIN CONTENT-->
-    <!-- ERSCHTI FUNKTION-->
-    <div class="function1">
-        <h1>Wortverschlüsselung 1</h1>
-        <input type="text" id="wordInput" placeholder="Gib ein Wort ein">
-        <button onclick="encryptButtonClicked()">Verschlüsseln</button>
-        <p>Verschlüsseltes Wort: <span id="encryptedWord"></span></p>
-        <button onclick="decryptButtonClicked()">Entschlüsseln</button>
-        <p>Entschlüsseltes Wort: <span id="decryptedWord"></span></p>
-    </div>
 
-    <!-- ZWEITI FUNKTION-->
-    <div class="function2">
-        <h1>Wortverschlüsselung 2</h1>
-        <input type="text" id="wortInput" placeholder="Gib ein Wort ein">
-        <button onclick="verschluessleButtonClicked()">Verschlüsseln</button>
-        <p>Verschlüsseltes Wort: <span id="verschluesselteWort"></span></p>
-        <button onclick="entschluessleButtonClicked()">Entschlüsseln</button>
-        <p>Entschlüsseltes Wort: <span id="entschluesselteWort"></span></p>
-    </div>
+    <h1>Encryption Program</h1>
+    <main>
+        <!-- MAIN CONTENT-->
+        <!-- ERSCHTI FUNKTION-->
+        <div class="container">
+
+            <div class="card">
+                <!-- <div class="function1"> -->
+
+                <div class="encrypt">
+                    <h2>Text encryption with Ceasar encryption</h2>
+                    <div class="input">
+                        <textarea type="text" id="wordInput" placeholder="Enter some text: ">
+                    </textarea>
+                        <button onclick="encryptButtonClicked()">Encrypt</button>
+                    </div>
+                    <p>Encypted text: <span id="encryptedWord"></span></p>
+                </div>
+
+                <div class="decrypt">
+                    <button onclick="decryptButtonClicked()">Decrypt</button>
+                    <p>Decrypted text: <span id="decryptedWord"></span></p>
+                </div>
+
+                <!-- </div> -->
+            </div>
+
+            <!-- ZWEITI FUNKTION-->
+            <div class="card">
+                <!-- <div class="function2"> -->
+
+                <div class="encrypt">
+                    <h2>Text encryption with </h2>
+                    <div class="input">
+                        <textarea type="text" id="wortInput" placeholder="Enter some text: ">
+                    </textarea>
+                        <button onclick="verschluessleButtonClicked()">Encrypt</button>
+                    </div>
+                    <p>Encypted text: <span id="verschluesselteWort"></span></p>
+                </div>
+
+                <div class="decrypt">
+                    <button onclick="entschluessleButtonClicked()">Decrypt</button>
+                    <p>Decrypted text: <span id="entschluesselteWort"></span></p>
+                </div>
+
+                <!-- </div> -->
+            </div>
+
+        </div>
+
+    </main>
 
 </body>
 

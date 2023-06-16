@@ -1,13 +1,13 @@
-// Funktion zum Verschlüsseln eines Worts
+//mir sind kei Schwiizerinne. Drum isch gebrocheniges schwiizerdüütsch jetze
+// Funktion zum en Text Verschlüssle
 function encrypt(word) {
-    // Implementiere hier deine Verschlüsselungsmethode
-    // Zum Beispiel: Ersetze jeden Buchstaben durch den nächsten Buchstaben im Alphabet
+    // Ersetz jede Buechstabe dur de nöchschte Buechstabe im Alphabet
     var encryptedWord = "";
     for (var i = 0; i < word.length; i++) {
       var charCode = word.charCodeAt(i);
       if (charCode >= 97 && charCode <= 122) { // Kleine Buchstaben
         encryptedWord += String.fromCharCode((charCode - 97 + 1) % 26 + 97);
-      } else if (charCode >= 65 && charCode <= 90) { // Große Buchstaben
+      } else if (charCode >= 65 && charCode <= 90) { // Grosse Buchstaben
         encryptedWord += String.fromCharCode((charCode - 65 + 1) % 26 + 65);
       } else {
         encryptedWord += word.charAt(i);
@@ -16,16 +16,15 @@ function encrypt(word) {
     return encryptedWord;
   }
 
-  // Funktion zum Entschlüsseln eines verschlüsselten Worts
+  // Funktion zum en verschlüsselte Text Entschlüssle 
   function decrypt(encryptedWord) {
-    // Implementiere hier deine Entschlüsselungsmethode
-    // Zum Beispiel: Ersetze jeden Buchstaben durch den vorherigen Buchstaben im Alphabet
+    // Ersetz jede Buechstabe dur de vorherige Buechstabe im Alphabet
     var decryptedWord = "";
     for (var i = 0; i < encryptedWord.length; i++) {
       var charCode = encryptedWord.charCodeAt(i);
-      if (charCode >= 97 && charCode <= 122) { // Kleine Buchstaben
+      if (charCode >= 97 && charCode <= 122) { // Chlini Buechstabe
         decryptedWord += String.fromCharCode((charCode - 97 - 1 + 26) % 26 + 97);
-      } else if (charCode >= 65 && charCode <= 90) { // Große Buchstaben
+      } else if (charCode >= 65 && charCode <= 90) { // Grossi Buechstabe
         decryptedWord += String.fromCharCode((charCode - 65 - 1 + 26) % 26 + 65);
       } else {
         decryptedWord += encryptedWord.charAt(i);
@@ -34,14 +33,15 @@ function encrypt(word) {
     return decryptedWord;
   }
 
-  // Event-Handler für die Verschlüsseln-Schaltfläche
+  // Event-Handler für t Verschlüssel-Schaltflächi
   function encryptButtonClicked() {
     var word = document.getElementById("wordInput").value;
     var encryptedWord = encrypt(word);
     document.getElementById("encryptedWord").textContent = encryptedWord;
+    console.log(encryptedWord);
   }
 
-  // Event-Handler für die Entschlüsseln-Schaltfläche
+  // Event-Handler für t Entschlüssel-Schaltflächi
   function decryptButtonClicked() {
     var encryptedWord = document.getElementById("encryptedWord").textContent;
     var decryptedWord = decrypt(encryptedWord);
@@ -49,12 +49,30 @@ function encrypt(word) {
   }
 
 
-    /////////////////77
-         // Funktion zum Verschlüsseln eines Worts
-    function verschluessle(wort) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ////////////////////////////////////////////////////////////////////////////
+         // Funktion zum en Text Verschlüssle
+    function verschluessle(word) {
         var verschluesselteWort = "";
-        for (var i = 0; i < wort.length; i++) {
-          var charCode = wort.charCodeAt(i);
+        for (var i = 0; i < word.length; i++) {
+          var charCode = word.charCodeAt(i);
           // Füge eine feste Anzahl an Zeichen zum ASCII-Wert hinzu
           var verschluesselteCharCode = charCode + 3;
           verschluesselteWort += String.fromCharCode(verschluesselteCharCode);
@@ -62,26 +80,26 @@ function encrypt(word) {
         return verschluesselteWort;
       }
   
-      // Funktion zum Entschlüsseln eines verschlüsselten Worts
+      // Funktion zum en verschlüsselte Text Entschlüssle
       function entschluessle(verschluesselteWort) {
         var entschluesselteWort = "";
         for (var i = 0; i < verschluesselteWort.length; i++) {
           var charCode = verschluesselteWort.charCodeAt(i);
-          // Subtrahiere die feste Anzahl an Zeichen vom ASCII-Wert
+          // Subtrahiere t festi Azahl a Zeiche vom ASCII-Wert
           var entschluesselteCharCode = charCode - 3;
           entschluesselteWort += String.fromCharCode(entschluesselteCharCode);
         }
         return entschluesselteWort;
       }
   
-      // Event-Handler für die Verschlüsseln-Schaltfläche
+      // Event-Handler für t Verschlüssel-Schaltflächi
       function verschluessleButtonClicked() {
-        var wort = document.getElementById("wortInput").value;
-        var verschluesselteWort = verschluessle(wort);
+        var word = document.getElementById("wortInput").value;
+        var verschluesselteWort = verschluessle(word);
         document.getElementById("verschluesselteWort").textContent = verschluesselteWort;
       }
   
-      // Event-Handler für die Entschlüsseln-Schaltfläche
+      // Event-Handler für t Entschlüssel-Schaltflächi
       function entschluessleButtonClicked() {
         var verschluesselteWort = document.getElementById("verschluesselteWort").textContent;
         var entschluesselteWort = entschluessle(verschluesselteWort);
