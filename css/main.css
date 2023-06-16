@@ -66,6 +66,10 @@ input {
     margin-bottom: 1em;
 }
 
+input:focus{
+    outline: none;
+}
+
 button {
     background-color: #a24caf;
     box-shadow: 1px 0px 7px 3px rgba(239, 194, 255, 0.79);
