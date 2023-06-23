@@ -16,6 +16,13 @@ body {
     margin-bottom: 0;
 }
 
+.title-card1{
+    border-radius: 0.5em;
+    text-align: center;
+    background-color: #abd1f2e6;
+    padding: 0.5em;
+    margin: 1em 1.5em 0em 1.5em;
+}
 .card {
     display: flex;
     flex-direction: row;
@@ -37,7 +44,6 @@ body {
 
 .decrypt {
     padding: 1em;
-    padding-top: 2EM;
     margin: 1em 0.2em 1em 0;
     flex-basis: 40%;
     height: 100%;
@@ -46,9 +52,7 @@ body {
     width: -webkit-fill-available;
 }
 
-.decrypt-text{
-    margin-bottom: 3em;
-}
+
 
 input {
     flex-basis: 80%;

@@ -15,25 +15,31 @@
         <!-- MAIN CONTENT-->
         <div class="container">
             <h1 class="title">Encryption Program</h1>
-            <div class="card">
-                <!-- ERSCHTI FUNKTION-->
-                <!-- <div class="function1"> -->
 
-                <div class="encrypt">
-                    <h2>Text encryption with Ceasar encryption</h2>
-                    <div class="input">
-                        <input type="text" id="wordInput" placeholder="Enter some text: ">
+            <!-- ERSCHTI FUNKTION-->
+            <!-- <div class="function1"> -->
+            <div class="card1">
+                <div>
+                    <h2 class="title-card1">Text encryption with Ceasar encryption</h2>
+                </div>
+                <div class="card">
+                    <div class="encrypt">
+                        <div class="input">
+                            <input type="text" id="wordInput" placeholder="Enter some text: ">
+                        </div>
+                        <button onclick="encryptButtonClicked()">Encrypt</button>
+                        <p>Encypted text: <span id="encryptedWord"></span></p>
                     </div>
-                    <button onclick="encryptButtonClicked()">Encrypt</button>
-                    <p>Encypted text: <span id="encryptedWord"></span></p>
-                </div>
 
-                <div class="decrypt">
-                    <button onclick="decryptButtonClicked()">Decrypt</button>
-                    <p class="decrypt-text">Decrypted text: <span id="decryptedWord"></span></p>
+                    <div class="decrypt">
+                        <div class="input">
+                            <input type="text" id="encryptedTextInput" placeholder="Enter encrypted text">
+                        </div>
+                        <button onclick="decryptButtonClicked()">Decrypt</button>
+                        <p class="decrypt-text">Decrypted text: <span id="decryptedWord"></span></p>
+                    </div>
+                    <!-- </div> -->
                 </div>
-
-                <!-- </div> -->
             </div>
 
             <!-- ZWEITI FUNKTION-->
