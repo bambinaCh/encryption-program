@@ -126,8 +126,7 @@ button {
     }
 
     body {
-        color: rgb(255, 255, 255, 1);
-        filter: brightness(60%);
+        background: url("../images/background-dark.jpg") center fixed no-repeat;   
     }
 
     .encrypt,
