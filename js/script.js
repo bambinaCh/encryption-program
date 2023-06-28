@@ -1,14 +1,14 @@
 //mir sind kei Schwiizerinne. Drum isch gebrocheniges schwiizerdüütsch jetze
 
-// Funktion zum en Text Verschlüssle mit Ceasar
+//Funktion zum en Text verschlüssle mit Ceasar
 function encrypt(word) {
-  // Ersetz jede Buechstabe dur de nöchschte Buechstabe im Alphabet
+  //Ersetz jede Buechstabe dur de nöchschte Buechstabe im Alphabet
   var encryptedWord = "";
   for (var i = 0; i < word.length; i++) {
     var charCode = word.charCodeAt(i);
-    if (charCode >= 97 && charCode <= 122) { // Chlini Buechstabe
+    if (charCode >= 97 && charCode <= 122) { //Chlini Buechstabe
       encryptedWord += String.fromCharCode((charCode - 97 + 1) % 26 + 97);
-    } else if (charCode >= 65 && charCode <= 90) { // Grossi Buechstabe
+    } else if (charCode >= 65 && charCode <= 90) { //Grossi Buechstabe
       encryptedWord += String.fromCharCode((charCode - 65 + 1) % 26 + 65);
     } else {
       encryptedWord += word.charAt(i);
@@ -17,15 +17,15 @@ function encrypt(word) {
   return encryptedWord;
 }
 
-// Funktion zum en verschlüsselte Text Entschlüssle mit Ceasar
+//Funktion zum en verschlüsselte Text Entschlüssle mit Ceasar
 function decrypt(word) {
-  // Ersetz jede Buechstabe dur de vorherige Buechstabe im Alphabet
+  //Ersetz jede Buechstabe dur de vorherige Buechstabe im Alphabet
   var decryptedWord = "";
   for (var i = 0; i < word.length; i++) {
     var charCode = word.charCodeAt(i);
-    if (charCode >= 97 && charCode <= 122) { // Chlini Buechstabe
+    if (charCode >= 97 && charCode <= 122) { //Chlini Buechstabe
       decryptedWord += String.fromCharCode((charCode - 97 - 1 + 26) % 26 + 97);
-    } else if (charCode >= 65 && charCode <= 90) { // Grossi Buechstabe
+    } else if (charCode >= 65 && charCode <= 90) { //Grossi Buechstabe
       decryptedWord += String.fromCharCode((charCode - 65 - 1 + 26) % 26 + 65);
     } else {
       decryptedWord += word.charAt(i);
@@ -34,26 +34,25 @@ function decrypt(word) {
   return decryptedWord;
 }
 
-// Event-Handler für t Verschlüssel-Schaltflächi
+//Event-Handler für t Verschlüssel-Schaltflächi
 function encryptButtonClicked() {
   var word = document.getElementById("wordInput").value;
   var encryptedWord = encrypt(word);
   document.getElementById("encryptedWord").textContent = encryptedWord;
-  console.log(encryptedWord);
 }
 
-// Event-Handler für t Entschlüssel-Schaltflächi
+//Event-Handler für t Entschlüssel-Schaltflächi
 function decryptButtonClicked() {
-  var encryptedText = document.getElementById("encryptedTextInput").value;
+  var encryptedText = document.getElementById("encryptedWord").textContent;
   var decryptedText = decrypt(encryptedText);
   document.getElementById("decryptedWord").textContent = decryptedText;
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-////////////////////////////////////////////////////////////////////////////
 // Funktion zum en Text verschlüssle au mit Ceasar
 function verschluessle(word) {
   var verschluesselteWort = "";
@@ -93,17 +92,17 @@ function entschluessleButtonClicked() {
 }
 
 
-////// Verschlüsselig mit Vigenere Verschlüsselig
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+//Verschlüsselig mit Vigenere Verschlüsselig
 //nimmt zwei Parameter, de Text und de Schlüssel
 function encryptText(text, keyword) {
-
   //verschlüsselte Text initialisiere
   let encryptedText = "";
-
   //Schlüsselwort Index initialisiere
   let keyIndex = 0;
-
   //Text iteriere
   for (let i = 0; i < text.length; i++) {
     //unicode vom aktuelle Zeiche
@@ -126,7 +125,6 @@ function encryptText(text, keyword) {
       //inkrement 1, uf 0 gsetzt wenn es am Endi isch
       keyIndex = (keyIndex + 1) % keyword.length;
     }
-
     //für wenn es kei Buechstabe isch
     if (!isLetter) {
       //Unicode wert hole und Modulo 256 um sicherzstelle, dass es innerhalb des ASCII-Code-Bereichs isch (0-255)
@@ -142,7 +140,7 @@ function encryptText(text, keyword) {
 }
 
 
-// Funktion zum de verschlüsselte Text wieder entschlüssle
+//Funktion zum de verschlüsselte Text wieder entschlüssle
 //Da wird eigentlich alles rückgängig gmacht, was in encryptText() gmacht worden isch
 function decryptText(encryptedText, keyword) {
   //entschlüsselte Text initialisiere
@@ -167,7 +165,6 @@ function decryptText(encryptedText, keyword) {
 
       keyIndex = (keyIndex + 1) % keyword.length;
     }
-
     //wenn kei Buechstabe
     if (!isLetter) {
       let decryptedCharCode = (charCode - keyword.charCodeAt(keyIndex) + 256) % 256;
@@ -179,9 +176,6 @@ function decryptText(encryptedText, keyword) {
 
   return decryptedText;
 }
-
-
-
 
 
 // Event-Handler für t Verschlüssel-Schaltflächi
@@ -201,6 +195,8 @@ function decodeClicked() {
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 //Funktion zum en Text mit XOR verschlüssle und entschlüssle
