@@ -43,7 +43,7 @@ function encryptButtonClicked() {
 
 //Event-Handler für t Entschlüssel-Schaltflächi
 function decryptButtonClicked() {
-  var encryptedText = document.getElementById("encryptedWord").textContent;
+  var encryptedText = document.getElementById("encryptedTextInput").value;
   var decryptedText = decrypt(encryptedText);
   document.getElementById("decryptedWord").textContent = decryptedText;
 }

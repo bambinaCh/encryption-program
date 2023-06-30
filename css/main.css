@@ -1,7 +1,7 @@
 body {
     background: url("../images/background.jpg") center fixed no-repeat;
-    background-color: rgb(193, 198, 200); 
-    
+    background-color: rgb(193, 198, 200);
+    background-size: cover;
 }
 .container {
     display: flex;
@@ -11,17 +11,16 @@ body {
     margin: 5em;
     margin-top: 3em;
 }
-.title{
+.title {
     text-align: center;
     margin-bottom: 0;
 }
 
-.title-card1{
+.title-card1 {
     border-radius: 0.5em;
     text-align: center;
-    background-color: #abd1f2e6;
+    background-color: rgb(171, 209, 242, 0.6);
     padding: 0.5em;
-    margin: 1em 1.5em 0em 1.5em;
 }
 .card {
     display: flex;
@@ -52,8 +51,6 @@ body {
     width: -webkit-fill-available;
 }
 
-
-
 input {
     flex-basis: 80%;
     height: 50%;
@@ -74,7 +71,7 @@ input {
     margin-bottom: 1em;
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
@@ -93,31 +90,32 @@ button {
     cursor: pointer;
 }
 
-
 @media (max-width: 426px) {
     .card {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .encrypt,
     .decrypt {
-      margin: 1em 0;
+        margin: 1em 0;
     }
 
     .container {
         margin: 0;
-  }
-
+    }
 }
 
 @media (prefers-color-scheme: dark) {
     .input {
         background-color: rgb(43, 65, 100);
+
         color: rgb(251, 249, 249);
     }
+
     input {
         background-color: rgb(43, 65, 100);
+
         color: rgb(251, 249, 249);
     }
 
@@ -126,7 +124,8 @@ button {
     }
 
     body {
-        background: url("../images/background-dark.jpg") center fixed no-repeat;   
+        background: url("../images/background-dark.jpg") center fixed no-repeat;
+        background-size: cover;
     }
 
     .encrypt,
