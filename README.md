@@ -8,3 +8,7 @@ Verschlüsselungsmethoden:
 - XOR
 
 [Link zur Seite](https://standbee.github.io/encryption-program)
+
+Chaimaa El Jarite
+
+Stephanie Beere
