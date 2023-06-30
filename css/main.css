@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Cyberbunny;
+    src: url(../fonts/cyberbunny/CyberBunny.ttf);
+}
+
+@font-face {
+    font-family: glitchy;
+    src: url(../fonts/glitchy/GlitchyDemoRegular.ttf);
+}
+
 body {
     background: url("../images/background.jpg") center fixed no-repeat;
     background-color: rgb(193, 198, 200);
@@ -14,6 +24,8 @@ body {
 .title {
     text-align: center;
     color: rgb(171, 209, 242);
+    font-family: glitchy;
+    font-size: xxx-large;
 }
 
 .title-card-div{
@@ -26,9 +38,10 @@ body {
     background-color: #a24cafbe;
     padding: 0.5em;
     color: azure;
-    
-
+    font-family: glitchy;
+    font-size:x-large
 }
+
 .card {
     display: flex;
     flex-direction: row;
@@ -36,6 +49,7 @@ body {
     margin: 0.5em 0.5em 1em 0.5em;
     box-shadow: rgba(0, 0, 0, 0.7) 0px 11px 16px;
     border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .encrypt {
@@ -46,6 +60,7 @@ body {
     background: rgb(171, 209, 242, 0.6);
     border-radius: 1rem;
     width: -webkit-fill-available;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .decrypt {
@@ -56,6 +71,7 @@ body {
     background: rgb(171, 209, 242, 0.6);
     border-radius: 1rem;
     width: -webkit-fill-available;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input {
@@ -141,6 +157,6 @@ button {
     }
 
     .title-card1 {
-        color: rgb(19, 33, 57);
+        color: rgb(37, 57, 90);
     }
 }
