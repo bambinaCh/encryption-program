@@ -13,16 +13,21 @@ body {
 }
 .title {
     text-align: center;
-    margin-bottom: 0;
     color: rgb(171, 209, 242);
 }
 
+.title-card-div{
+    display: flex;
+    justify-content: space-evenly;
+}
 .title-card1 {
     border-radius: 0.5em;
     text-align: center;
     background-color: #a24cafbe;
     padding: 0.5em;
     color: azure;
+    
+
 }
 .card {
     display: flex;
