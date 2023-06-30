@@ -26,6 +26,7 @@ body {
     background-color: #a24cafbe;
     padding: 0.5em;
     color: azure;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 11px 16px;
     
 
 }
@@ -34,8 +35,6 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 0.5em 0.5em 1em 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.7) 0px 11px 16px;
-    border-radius: 5px;
 }
 
 .encrypt {
@@ -46,6 +45,8 @@ body {
     background: rgb(171, 209, 242, 0.6);
     border-radius: 1rem;
     width: -webkit-fill-available;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 11px 16px;
+
 }
 
 .decrypt {
@@ -56,6 +57,7 @@ body {
     background: rgb(171, 209, 242, 0.6);
     border-radius: 1rem;
     width: -webkit-fill-available;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 11px 16px;
 }
 
 input {
