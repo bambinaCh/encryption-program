@@ -23,15 +23,15 @@
                 <div class="card">
                     <div class="encrypt">
                         <div class="input">
-                            <input type="text" id="wordInput" placeholder="Enter some text ">
+                            <input type="text" id="ceasarInput" placeholder="Enter some text ">
                         </div>
                         <button onclick="encryptButtonClicked()">Encrypt</button>
-                        <p>Encypted text: <span id="encryptedCeasar"></span><span id="encryptedWord"></span></p>
+                        <p>Encypted text: <span id="encryptedCeasar"></span></p>
                     </div>
 
                     <div class="decrypt">
                         <div class="input">
-                            <input type="text" id="encryptedTextInput" placeholder="Enter encrypted text">
+                            <input type="text" id="encryptedCeasarInput" placeholder="Enter encrypted text">
                         </div>
                         <button onclick="decryptButtonClicked()">Decrypt</button>
                         <p class="decrypt-text">Decrypted text: <span id="decryptedCeasar"></span></p>
@@ -40,6 +40,14 @@
                 </div>
             </div>
 
+
+
+
+
+
+
+
+
             <!--CAESER ASCII-->
             <div class="card1" id="caesar-ascii">
                 <div class="title-card-div">
@@ -47,24 +55,37 @@
                 </div>
                 <div class="card">
 
+
+
+
                     <div class="encrypt">
                         <div class="input">
-                            <input type="text" id="wortInput" placeholder="Enter some text ">
+                            <input type="text" id="asciiInput" placeholder="Enter some text ">
                         </div>
                         <button onclick="verschluessleButtonClicked()">Encrypt</button>
-                        <p>Encypted text: <span id="encryptedText"></span><span id="verschluesselteWort"></span></p>
+                        <p>Encypted text: <span id="encryptedAscii"></span></p>
                     </div>
+
+
+
 
                     <div class="decrypt">
                         <div class="input">
-                            <input type="text" id="encryptedTextInput" placeholder="Enter encrypted text">
+                            <input type="text" id="encryptedAsciiInput" placeholder="Enter encrypted text">
                         </div>
 
                         <button onclick="entschluessleButtonClicked()">Decrypt</button>
-                        <p class="decrypt-text">Decrypted text: <span id="entschluesselteWort"></span></p>
+                        <p class="decrypt-text">Decrypted text: <span id="decryptedAscii"></span></p>
                     </div>
+
+
                 </div>
             </div>
+
+
+
+
+
 
             <!--VIGNERE-->
             <div class="card1" id="vigenere">
@@ -88,10 +109,10 @@
 
                     <div class="decrypt">
                         <div class="input">
-                            <input type="text" id="encryptedText" placeholder="Enter encrypted text">
+                            <input type="text" id="encryptedVigInput" placeholder="Enter encrypted text">
                         </div>
                         <div class="input">
-                            <input type="text" id="keyword" placeholder="Enter keyword ">
+                            <input type="text" id="enVigKeyword" placeholder="Enter keyword ">
                         </div>
                         <button onclick="decodeClicked()">Decrypt</button>
                         <p class="decrypt-text">Decrypted text: <span id="decryptedVigenere"></span></p>
@@ -108,24 +129,24 @@
                 <div class="card">
                     <div class="encrypt">
                         <div class="input">
-                            <input type="text" id="inputText" placeholder="Enter some text ">
+                            <input type="text" id="xorInput" placeholder="Enter some text ">
                         </div>
                         <div class="input">
-                            <input type="text" id="keyword" placeholder="Enter keyword ">
+                            <input type="text" id="xorKeyword" placeholder="Enter keyword ">
                         </div>
                         <button onclick="xorEncrypt()">Encrypt</button>
-                        <p>Encypted text: <span id="encrypted"></span></p>
+                        <p>Encypted text: <span id="encryptedXor"></span></p>
                     </div>
 
                     <div class="decrypt">
                         <div class="input">
-                            <input type="text" id="encryptedTextInput" placeholder="Enter encrypted text">
+                            <input type="text" id="encryptedXorInput" placeholder="Enter encrypted text">
                         </div>
                         <div class="input">
-                            <input type="text" id="keyword" placeholder="Enter keyword ">
+                            <input type="text" id="enXorKeyword" placeholder="Enter keyword ">
                         </div>
                         <button onclick="xorDecrypt()">Decrypt</button>
-                        <p class="decrypt-text">Decrypted text: <span id="decrypted"></span></p>
+                        <p class="decrypt-text">Decrypted text: <span id="decryptedXor"></span></p>
                     </div>
                 </div>
             </div>
