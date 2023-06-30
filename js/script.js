@@ -1,4 +1,7 @@
 //mir sind kei Schwiizerinne. Drum isch gebrocheniges schwiizerdüütsch jetze
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////CAESAR////////////////////////////
 
 //Funktion zum en Text verschlüssle mit Ceasar
 function encrypt(word) {
@@ -38,22 +41,22 @@ function decrypt(word) {
 function encryptButtonClicked() {
   var word = document.getElementById("wordInput").value;
   var encryptedWord = encrypt(word);
-  document.getElementById("encryptedWord").textContent = encryptedWord;
+  document.getElementById("encryptedCeasar").textContent = encryptedWord;
 }
 
 //Event-Handler für t Entschlüssel-Schaltflächi
 function decryptButtonClicked() {
   var encryptedText = document.getElementById("encryptedTextInput").value;
   var decryptedText = decrypt(encryptedText);
-  document.getElementById("decryptedWord").textContent = decryptedText;
+  document.getElementById("decryptedCeasar").textContent = decryptedText;
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////CAESAR ASCII////////////////////////////
 
-
-// Funktion zum en Text verschlüssle au mit Ceasar
+// Funktion zum en Text verschlüssle au mit Ceasar aber ASCII
 function verschluessle(word) {
   var verschluesselteWort = "";
   for (var i = 0; i < word.length; i++) {
@@ -65,7 +68,7 @@ function verschluessle(word) {
   return verschluesselteWort;
 }
 
-// Funktion zum en verschlüsselte Text Entschlüssle au mit Ceasar
+// Funktion zum en verschlüsselte Text Entschlüssle au mit Ceasar aber ASCII
 function entschluessle(verschluesselteWort) {
   var entschluesselteWort = "";
   for (var i = 0; i < verschluesselteWort.length; i++) {
@@ -94,7 +97,7 @@ function entschluessleButtonClicked() {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+/////////////////////////////VIGNERE////////////////////////////
 
 //Verschlüsselig mit Vigenere Verschlüsselig
 //nimmt zwei Parameter, de Text und de Schlüssel
@@ -135,7 +138,7 @@ function encryptText(text, keyword) {
       keyIndex = (keyIndex + 1) % keyword.length;
     }
   }
-
+  console.log(encryptedText);
   return encryptedText;
 }
 
@@ -143,6 +146,7 @@ function encryptText(text, keyword) {
 //Funktion zum de verschlüsselte Text wieder entschlüssle
 //Da wird eigentlich alles rückgängig gmacht, was in encryptText() gmacht worden isch
 function decryptText(encryptedText, keyword) {
+  console.log(encryptedText, keyword)
   //entschlüsselte Text initialisiere
   let decryptedText = "";
   let keyIndex = 0;
@@ -173,31 +177,31 @@ function decryptText(encryptedText, keyword) {
       keyIndex = (keyIndex + 1) % keyword.length;
     }
   }
-
+  console.log(decryptedText)
   return decryptedText;
 }
 
 
 // Event-Handler für t Verschlüssel-Schaltflächi
 function encodeClicked() {
-  let keyword = document.getElementById("keyword").value;
+  let keyword = document.getElementById("vigKeyword").value;
   let text = document.getElementById("vigInput").value;
   let encryptedText = encryptText(text, keyword);
-  document.getElementById("encryptedText").textContent = encryptedText;
+  document.getElementById("encryptedVigenere").textContent = encryptedText;
 }
 
 // Event-Handler für t Entschlüssel-Schaltflächi
 function decodeClicked() {
-  let keyword = document.getElementById("keyword").value
+  let keyword = document.getElementById("vigKeyword").value
   let encryptedText = document.getElementById("encryptedText").textContent;
   let decryptedText = decryptText(encryptedText, keyword);
-  document.getElementById("decryptedText").textContent = decryptedText;
+  document.getElementById("decryptedVigenere").textContent = decryptedText;
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+/////////////////////////////XOR////////////////////////////
 
 //Funktion zum en Text mit XOR verschlüssle und entschlüssle
 //Da es e Symmetrischi Operation isch, wenn es zweimal agwendet wird, gliicht es sich us
