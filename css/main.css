@@ -157,6 +157,13 @@ button {
     cursor: pointer;
 }
 
+label{
+    padding: 0em 0.5em 0em 0.5em ;
+    font-size:small;
+    color: #a24caf;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 @media (max-width: 426px) {
     .card {
         flex-direction: column;
