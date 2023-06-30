@@ -2,7 +2,7 @@
 
 /////////////////////////////CAESAR/////////////////////////////////////////////
 
-//Funktion zum en Text verschlüssle mit Ceasar
+//Funktion zum en Text verschlüssle mit Caesar
 function encrypt(word) {
   //Ersetz jede Buechstabe dur de nöchschte Buechstabe im Alphabet
   var encryptedWord = "";
@@ -19,7 +19,7 @@ function encrypt(word) {
   return encryptedWord;
 }
 
-//Funktion zum en verschlüsselte Text Entschlüssle mit Ceasar
+//Funktion zum en verschlüsselte Text Entschlüssle mit Caesar
 function decrypt(word) {
   //Ersetz jede Buechstabe dur de vorherige Buechstabe im Alphabet
   var decryptedWord = "";
@@ -38,21 +38,21 @@ function decrypt(word) {
 
 //Event-Handler für t Verschlüssel-Schaltflächi
 function encryptButtonClicked() {
-  var word = document.getElementById("ceasarInput").value;
+  var word = document.getElementById("caesarInput").value;
   var encryptedWord = encrypt(word);
-  document.getElementById("encryptedCeasar").textContent = encryptedWord;
+  document.getElementById("encryptedCaesar").textContent = encryptedWord;
 }
 
 //Event-Handler für t Entschlüssel-Schaltflächi
 function decryptButtonClicked() {
-  var encryptedText = document.getElementById("encryptedCeasarInput").value;
+  var encryptedText = document.getElementById("encryptedCaesarInput").value;
   var decryptedText = decrypt(encryptedText);
-  document.getElementById("decryptedCeasar").textContent = decryptedText;
+  document.getElementById("decryptedCaesar").textContent = decryptedText;
 }
 
 ////////////////////////////CAESAR ASCII//////////////////////////////////////////
 
-// Funktion zum en Text verschlüssle au mit Ceasar aber ASCII
+// Funktion zum en Text verschlüssle au mit Caesar aber ASCII
 function verschluessle(word) {
   var verschluesselteWort = "";
   for (var i = 0; i < word.length; i++) {
@@ -64,7 +64,7 @@ function verschluessle(word) {
   return verschluesselteWort;
 }
 
-// Funktion zum en verschlüsselte Text Entschlüssle au mit Ceasar aber ASCII
+// Funktion zum en verschlüsselte Text Entschlüssle au mit Caesar aber ASCII
 function entschluessle(verschluesselteWort) {
   var entschluesselteWort = "";
   for (var i = 0; i < verschluesselteWort.length; i++) {
