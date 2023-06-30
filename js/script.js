@@ -193,7 +193,7 @@ function encodeClicked() {
 // Event-Handler für t Entschlüssel-Schaltflächi
 function decodeClicked() {
   let keyword = document.getElementById("vigKeyword").value
-  let encryptedText = document.getElementById("encryptedText").textContent;
+  let encryptedText = document.getElementById("encryptedVigenere").textContent;
   let decryptedText = decryptText(encryptedText, keyword);
   document.getElementById("decryptedVigenere").textContent = decryptedText;
 }
