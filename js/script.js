@@ -39,14 +39,14 @@ function decrypt(word) {
 
 //Event-Handler für t Verschlüssel-Schaltflächi
 function encryptButtonClicked() {
-  var word = document.getElementById("wordInput").value;
+  var word = document.getElementById("ceasarInput").value;
   var encryptedWord = encrypt(word);
   document.getElementById("encryptedCeasar").textContent = encryptedWord;
 }
 
 //Event-Handler für t Entschlüssel-Schaltflächi
 function decryptButtonClicked() {
-  var encryptedText = document.getElementById("encryptedTextInput").value;
+  var encryptedText = document.getElementById("encryptedCeasarInput").value;
   var decryptedText = decrypt(encryptedText);
   document.getElementById("decryptedCeasar").textContent = decryptedText;
 }
@@ -82,16 +82,16 @@ function entschluessle(verschluesselteWort) {
 
 // Event-Handler für t Verschlüssel-Schaltflächi
 function verschluessleButtonClicked() {
-  var word = document.getElementById("wortInput").value;
+  var word = document.getElementById("asciiInput").value;
   var verschluesselteWort = verschluessle(word);
-  document.getElementById("verschluesselteWort").textContent = verschluesselteWort;
+  document.getElementById("encryptedAscii").textContent = verschluesselteWort;
 }
 
 // Event-Handler für t Entschlüssel-Schaltflächi
 function entschluessleButtonClicked() {
-  var verschluesselteWort = document.getElementById("verschluesselteWort").textContent;
+  var verschluesselteWort = document.getElementById("encryptedAsciiInput").value;
   var entschluesselteWort = entschluessle(verschluesselteWort);
-  document.getElementById("entschluesselteWort").textContent = entschluesselteWort;
+  document.getElementById("decryptedAscii").textContent = entschluesselteWort;
 }
 
 
@@ -192,8 +192,8 @@ function encodeClicked() {
 
 // Event-Handler für t Entschlüssel-Schaltflächi
 function decodeClicked() {
-  let keyword = document.getElementById("vigKeyword").value
-  let encryptedText = document.getElementById("encryptedVigenere").textContent;
+  let keyword = document.getElementById("enVigKeyword").value
+  let encryptedText = document.getElementById("encryptedVigInput").value;
   let decryptedText = decryptText(encryptedText, keyword);
   document.getElementById("decryptedVigenere").textContent = decryptedText;
 }
@@ -223,15 +223,15 @@ function xor(text, key) {
 
 
 function xorEncrypt() {
-  let inputText = document.getElementById("inputText").value;
-  let key = document.getElementById("encryptionKey").value;
+  let inputText = document.getElementById("xorInput").value;
+  let key = document.getElementById("xorKeyword").value;
   const encryptedText = xor(inputText, key);
-  document.getElementById("encrypted").textContent = encryptedText;
+  document.getElementById("encryptedXor").textContent = encryptedText;
 }
 
 function xorDecrypt() {
-  let encryptedText = document.getElementById("encrypted").textContent;
-  let key = document.getElementById("encryptionKey").value;
+  let encryptedText = document.getElementById("encryptedXorInput").value;
+  let key = document.getElementById("enXorKeyword").value;
   const decryptedText = xor(encryptedText, key);
-  document.getElementById("decrypted").textContent = decryptedText;
+  document.getElementById("decryptedXor").textContent = decryptedText;
 }
