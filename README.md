@@ -7,7 +7,7 @@ Verschlüsselungsmethoden:
 - Vigenère
 - XOR
 
-[Link zur Seite](https://standbee.github.io/encryption-program)
+[Link zur Seite](https://standbee.github.io/encryption-program) oder [Hier](https://bambinach.github.io/encryption-program/)
 
 Chaimaa El Jarite
 
