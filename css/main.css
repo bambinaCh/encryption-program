@@ -22,6 +22,14 @@ body {
     margin-top: 3em;
 }
 
+.nav-title{
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
 .nav-button {
     border-radius: 0.5em;
     text-align: center;
@@ -36,14 +44,6 @@ body {
 
 }
 
-.nav-title{
-    text-decoration: underline;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
 .dropdown {
     position: relative;
 }
@@ -69,6 +69,7 @@ a.dropdown-content:hover{
     color: #a24cafbe;
     font-family: glitchy;
     font-size: xxx-large;
+    margin-top: 3rem;
 }
 
 .title-card-div {

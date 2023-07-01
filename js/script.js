@@ -235,3 +235,52 @@ function xorDecrypt() {
   const decryptedText = xor(encryptedText, key);
   document.getElementById("decryptedXor").textContent = decryptedText;
 }
+
+
+
+/////////////////////////////////////////////////////////////////////////
+////// da une chunt de function fuer de dropdown button///////////////////
+
+// Get the button and dropdown content elements
+const button = document.querySelector('.nav-button');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+let clickCount = 0; // Track the number of clicks
+
+// Toggle the display of the dropdown content on button click
+button.addEventListener('click', function() {
+  clickCount++;
+  
+  if (clickCount % 2 === 1) {
+    dropdownContent.style.display = 'block';
+  } else {
+    dropdownContent.style.display = 'none';
+  }
+});
+
+
+let isDropdownOpen = false; // Track the state of the dropdown
+
+// Toggle the display of the dropdown content on button click
+button.addEventListener('click', function() {
+  if (!isDropdownOpen) {
+    dropdownContent.style.display = 'block';
+    isDropdownOpen = true;
+  } else {
+    dropdownContent.style.display = 'none';
+    isDropdownOpen = false;
+  }
+});
+
+// Close the dropdown when clicking outside of it
+document.addEventListener('click', function(event) {
+  const target = event.target;
+  if (!target.closest('.nav-button') && isDropdownOpen) {
+    dropdownContent.style.display = 'none';
+    isDropdownOpen = false;
+  }
+});
+
+
+
+
